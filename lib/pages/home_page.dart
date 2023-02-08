@@ -9,10 +9,20 @@ class HomePage extends StatelessWidget {
         title: Text("Catalog App"),
       ),
       body: Center(
-        child: Container(
-          child: Text(
-            "Welcome to my  new app",
-          ),
+        child: Column(
+          children: [
+            Container(
+              child: Text(
+                "Welcome to my  new app",
+              ),
+            ),
+            ElevatedButton(
+              child: Text("back"),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
         ),
       ),
       drawer: Drawer(),
